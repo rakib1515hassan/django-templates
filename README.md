@@ -1,31 +1,45 @@
-# Plexus Cloud 
+# Django Templates
 
-1. Create Vertual Invironments
->> python3 -m venv venv
-
-
-2. Activate Virtual Invironments
->> source venv/bin/activate
+## 1. Create Vertual Invironments
+```bash
+python3 -m venv venv
+```
 
 
-3. Install Requirement Txt Files
->> pip install -r requirements.txt
+## 2. Activate Virtual Invironments
+```bash
+source venv/bin/activate
+```
 
 
-4. Makemigration
->> python manage.py makemigrations
+## 3. Install Requirement Txt Files
+```bash
+pip install -r requirements.txt
+```
 
 
-
-5. Migrate
->> python manage.py migrate
-
-
-
-6. Create Superuser
->> python manage.py createsuperuser
+## 4. Makemigration
+```bash
+python manage.py makemigrations
+```
 
 
 
-7. Now can Login
->> python manage.py runserver
+## 5. Migrate
+```bash
+python manage.py migrate
+```
+
+
+
+## 6. Create Superuser
+```bash
+python manage.py createsuperuser
+```
+
+
+
+## 7. Now can Login
+```bash
+python manage.py runserver
+```
