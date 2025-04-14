@@ -37,7 +37,6 @@ CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=[])
 CUSTOM_APPS = [
     'apps.core.apps.CoreConfig',                # core
     'apps.users.apps.UsersConfig',              # users
-    'apps.dashboards.apps.DashboardsConfig',    # dashboards
 ]
 
 ## For Third Party Apps
@@ -103,9 +102,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'apps/dashboards/templates'),
-            os.path.join(BASE_DIR, 'apps/auth/templates'),
-            os.path.join(BASE_DIR, 'apps/admin/templates'),
+            # os.path.join(BASE_DIR, 'apps/dashboards/templates'),
+            # os.path.join(BASE_DIR, 'apps/auth/templates'),
+            # os.path.join(BASE_DIR, 'apps/admin/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
