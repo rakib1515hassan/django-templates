@@ -1,5 +1,4 @@
 {% load static %}
-{% load static vue_static %}
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -7,12 +6,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> {% block title %} Master {% endblock title %} </title>
+    <title>{% block title %} Master {% endblock title %}</title>
 
-    <!-- ===============================================-->
-    <!-- Vue Js Connection (CSS) -->
-    <link rel="stylesheet" href="{% vue_asset 'css' %}">
-    <!-- ===============================================-->
+    <!-- =========================================================================== -->
+    <!-- Vue JS Connection -->
+    {% if debug %}
+    <!-- Load from Vite Dev Server in development mode -->
+    <script type="module" src="http://localhost:5173/src/main.js"></script>
+    {% else %}
+    <!-- Load compiled static files in production -->
+    <link rel="stylesheet" href="{% static 'vue/assets/style.css' %}">
+    <script type="module" src="{% static 'vue/assets/main.js' %}"></script>
+    {% endif %}
+    <!-- =========================================================================== -->
 
     <meta name="csrf-token" content="{{ csrf_token }}">
     {% block styles %}{% endblock styles %}
@@ -21,17 +27,10 @@
 <body>
 
     <div id="app">
+        {% block content %}
 
-
-
-
+        {% endblock content %}
     </div>
-
-
-    <!-- ===============================================-->
-    <!-- Vue Js Connection (JS) -->
-    <script type="module" src="{% vue_asset 'js' %}"></script>
-    <!-- ===============================================-->
 
     {% block js %} {% endblock js %}
 </body>

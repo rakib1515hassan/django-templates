@@ -1,6 +1,13 @@
-// import './assets/main.css'
+import "./assets/main.css";
+import { createApp } from "vue";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+// 👇 Correct import from app.js with named export
+import { DashboardComponent } from "../../apps/auth/assets/js/app.js";
 
-createApp(App).mount('#app')
+const app = createApp({
+  template: "<admin-dashboard />",
+});
+
+app.component("admin-dashboard", DashboardComponent);
+
+app.mount("#app");

@@ -103,7 +103,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             # os.path.join(BASE_DIR, 'apps/dashboards/templates'),
-            # os.path.join(BASE_DIR, 'apps/auth/templates'),
+            os.path.join(BASE_DIR, 'apps/auth/templates'),
             # os.path.join(BASE_DIR, 'apps/admin/templates'),
         ],
         'APP_DIRS': True,
@@ -113,6 +113,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.core.context_processors.debug',  ## Pass the debug = True/False
             ],
         },
     },
