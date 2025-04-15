@@ -16,6 +16,13 @@ python -m pip install django-environ
 ```
 
 
+## Python DotEnv
+```bash
+pip install python-dotenv
+```
+
+
+
 ## psycopg2 - Python-PostgreSQL Database Adapter
 ```bash
 pip install psycopg2-binary
