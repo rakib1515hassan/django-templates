@@ -9,7 +9,7 @@ test.json
 
 
 ## ignor vue on static
-static/vue/
+*vue/
 
 # Django #
 *.log
