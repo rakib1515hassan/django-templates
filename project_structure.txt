@@ -38,7 +38,7 @@ django-template /
 │   ├── __init__.py
 │   └── "My All Apis Define in here"              
 │
-├── frontend/                   
+├── frontend/        // Here i setup my Vue project                 
 │   ├── public/
 │   ├── src/
 |   │   ├── assets/
@@ -59,7 +59,10 @@ django-template /
 │
 ├── static/                 
 │   ├── css/
-│   └── js/
+│   ├── js/
+│   └── vue/
+|       ├── assets/main.js
+|       └── assets/style.css
 │
 ├── media/                 
 │
