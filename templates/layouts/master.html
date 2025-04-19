@@ -9,12 +9,14 @@
     <title>{% block title %} Master {% endblock title %}</title>
 
     <!-- =========================================================================== -->
-    <!-- Vue JS Connection -->
+    <!-- ========================( Vue JS Connection )============================== -->
+    <!--  -->
     {% if debug %}
-    <!-- Load from Vite Dev Server in development mode -->
+    <!-- Vite Dev Server during development -->
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
     <script type="module" src="http://localhost:5173/src/main.js"></script>
     {% else %}
-    <!-- Load compiled static files in production -->
+    <!-- Production build files -->
     <link rel="stylesheet" href="{% static 'vue/assets/style.css' %}">
     <script type="module" src="{% static 'vue/assets/main.js' %}"></script>
     {% endif %}
@@ -25,13 +27,11 @@
 </head>
 
 <body>
-
     <div id="app">
         {% block content %}
 
         {% endblock content %}
     </div>
-
     {% block js %} {% endblock js %}
 </body>
 

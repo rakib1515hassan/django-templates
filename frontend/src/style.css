@@ -1,0 +1,12 @@
+@import "tailwindcss" source(none);
+
+@source "../src/**/*.vue";
+@source "../src/**/*.js";
+
+@source "../../templates/**/*.html";
+@source "../../**/templates/**/*.html";
+@source "../../**/*.vue";
+
+
+
+

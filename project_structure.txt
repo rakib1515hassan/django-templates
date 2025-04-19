@@ -31,39 +31,51 @@ django-template /
 │   └── asgi.py
 │
 ├── apps/                   
-│   ├── __init__.py
-│   └── "My All Apps Define in here"  
+│   ├── auth/
+|   │   ├── templates/auth/dashboard.html       ← এখানে আমার auth related html থাকবে
+|   │   ├── assets/js/components/Dashboard.vue  ← এখানে আমার auth related components থাকবে
+|   │   ├── assets/js/app.js                    ← এখানে আমার auth এর components গুলোকে export করি   
+|   │   ├── __init__.py
+|   │   ├── apps.py
+|   │   ├── admin.py
+|   │   ├── models.py
+|   │   ├── urls.py
+|   │   └── views.py
+│   ├── Others apps                       ← এখানে আমার বাকি app গুলো একই stracture এ থাকবে                                    
+│   └── urls.py 
 |
 ├── apis/                   
 │   ├── __init__.py
 │   └── "My All Apis Define in here"              
 │
-├── frontend/        // Here i setup my Vue project                 
+├── frontend/                             ← Vue 3 with Vite project                
 │   ├── public/
 │   ├── src/
 |   │   ├── assets/
 |   │   ├── components/
 |   │   ├── App.vue
 |   │   ├── main.js
-|   │   └── utils.js
+|   │   └── style.css
 │   |
-│   ├── jsconfig.json
+│   ├── index.html
 │   ├── package.json
-│   ├── vite.config.js
-│   └── vue.config.js 
+│   └── vite.config.js
 │
 │
 ├── templates/             
-│   ├── base.html
-│   └── 404.html
+│   └── layouts/
+|       └── master.html
 │
-├── static/                 
+├── static/                             ← Django dev static files             
 │   ├── css/
 │   ├── js/
-│   └── vue/
+│   └── vue/                            ← Vite build output here
 |       ├── assets/main.js
 |       └── assets/style.css
+|
+├── static_root/                        ← Django collectstatic output
 │
 ├── media/                 
 │
 └── README.md           
+
